@@ -1,0 +1,14 @@
+version: "3"
+services: 
+    discord:
+        build: 
+            context: ./alfred_discordbot_server
+        hostname: alfred-discordBot-container
+        ports:
+            - "2299:2299"
+    telegram:
+        build: 
+            context: ./alfred_telegrambot_server
+        hostname: alfed-telegrambot-container
+        ports:
+            - "2300:2300"
